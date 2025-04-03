@@ -2,7 +2,10 @@ import React from 'react'
 
 function ProfilePage() {
   return (
-    <div>gifts code</div>
+    <div className='bg-amber-600 text-red-600 h-screen w-screen'>
+      <div>Your Profile</div>
+
+    </div>
   )
 }
 

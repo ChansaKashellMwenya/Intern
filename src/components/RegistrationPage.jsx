@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const RegisterPage = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Registration submitted:', { name, email, password });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0B0F19] to-[#151a2b]">
       <header className="p-6"></header>
@@ -14,7 +24,7 @@ const RegisterPage = () => {
               </p>
             </div>
             
-            <form className="mt-8 space-y-6">
+            <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
               <div className="rounded-md space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300">
@@ -26,6 +36,8 @@ const RegisterPage = () => {
                     type="text"
                     className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
                     placeholder="Enter your name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
 
@@ -39,6 +51,8 @@ const RegisterPage = () => {
                     type="email"
                     className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
                     placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 
@@ -52,6 +66,8 @@ const RegisterPage = () => {
                     type="password"
                     className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
                     placeholder="Create a password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
 
@@ -65,6 +81,8 @@ const RegisterPage = () => {
                     type="password"
                     className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
                     placeholder="Confirm your password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                 </div>
               </div>

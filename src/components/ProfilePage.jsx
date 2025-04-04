@@ -1,6 +1,8 @@
 import React from 'react'
 import img from '../assets/pic.jpg'
 
+
+
 function ProfilePage() {
   return (
     <div className='bg-[#02091c] min-h-screen'>
@@ -14,7 +16,7 @@ function ProfilePage() {
               <div>
                 <div className='flex gap-10 mb-5 items-center'>
                   <div className='w-30 h-30 bg-[#1F2937] rounded-full flex items-center justify-center text-2xl'>
-                    T
+                    <img src={img} alt="t" className='w-30 h-30 bg-[#1F2937] rounded-full flex items-center justify-center text-2x'/>
                   </div>
                   <div className='flex-1'>
                     <label htmlFor="" className=''> Profile Picture URL</label>

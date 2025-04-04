@@ -18,7 +18,7 @@ const RegisterPage = () => {
         <div className="max-w-md w-full">
           <div className="bg-[#0B0F19] border border-gray-700 rounded-lg p-8">
             <div className="text-center">
-              <h2 className="text-xl font-medium text-white">Create an Account</h2>
+              <h2 className="mt-2 text-xl font-medium text-white">Create an Account</h2>
               <p className="mt-2 text-sm text-gray-400">
                 Enter your details to create your account
               </p>
@@ -34,7 +34,9 @@ const RegisterPage = () => {
                     id="name"
                     name="name"
                     type="text"
-                    className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
+                    autoComplete="name"
+                    required
+                    className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                     placeholder="Enter your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -49,7 +51,9 @@ const RegisterPage = () => {
                     id="email"
                     name="email"
                     type="email"
-                    className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
+                    autoComplete="email"
+                    required
+                    className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -64,7 +68,9 @@ const RegisterPage = () => {
                     id="password"
                     name="password"
                     type="password"
-                    className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
+                    autoComplete="new-password"
+                    required
+                    className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                     placeholder="Create a password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -79,7 +85,9 @@ const RegisterPage = () => {
                     id="confirmPassword"
                     name="confirmPassword"
                     type="password"
-                    className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
+                    autoComplete="new-password"
+                    required
+                    className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                     placeholder="Confirm your password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
@@ -90,7 +98,7 @@ const RegisterPage = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
                   Register
                 </button>

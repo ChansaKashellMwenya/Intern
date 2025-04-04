@@ -78,6 +78,15 @@ const LoginPage = () => {
                 </button>
               </div>
             </form>
+            
+            <div className="mt-4 text-center text-sm">
+              <p className="text-gray-400">
+                Don't have an account?{' '}
+                <Link to="/register" className="font-bold text-blue-400 hover:text-blue-300 underline">
+                  Register
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>

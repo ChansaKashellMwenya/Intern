@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Login submitted:', { email, password });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0B0F19] to-[#151a2b]">
       <header className="flex justify-between items-center p-6">
@@ -24,7 +32,7 @@ const LoginPage = () => {
               </p>
             </div>
             
-            <form className="mt-8 space-y-6">
+            <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
               <div className="rounded-md space-y-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300">
@@ -38,6 +46,8 @@ const LoginPage = () => {
                     required
                     className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
                     placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 
@@ -53,6 +63,8 @@ const LoginPage = () => {
                     required
                     className="mt-1 block w-full px-3 py-2 bg-[#141a29] border border-gray-700 rounded-md text-white placeholder-gray-500"
                     placeholder="Enter your password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
               </div>
